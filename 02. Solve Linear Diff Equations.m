@@ -7,6 +7,13 @@ odefun=@(T,x) [x(2); -100.*(x(1)-1)+9.81.*cos(x(3))+x(1).*x(4).*x(4); x(4)
 
 r=stateMatrix(:,1);
 theta=stateMatrix(:,3);
+subplot(2,1,1);
 plot(time, r);
-figure()
+title('Plot 1: R v/s Time')
+xlabel('Time (s)')
+ylabel('R (m)') 
+subplot(2,1,2)
 plot(time, theta);
+title('Plot 2: Theta v/s Time')
+xlabel('Time (s)')
+ylabel('Theta (rad)') 
